@@ -61,9 +61,18 @@ class Home extends Component {
 
   render(){
     return(
-      <div>
-        <HeroImage />
-        <SearchBar />
+      <div className="rmdb-home">
+        {/** Ternary Operator*/}
+        { this.state.heroImage ?
+        <div>
+          <HeroImage 
+            image={ `${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}` }
+            title={ this.state.heroImage.original_title }
+            text={ this.state.heroImage.overview }
+          />
+          <SearchBar />
+        </div> : null }
+        
         <FourColGrid />
         <Spinner />
         <LoadMoreBtn />
