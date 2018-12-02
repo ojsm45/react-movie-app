@@ -104,10 +104,18 @@ class Home extends Component {
                       />
             })};
           </FourColGrid>
+          { this.state.loading ? <Spinner /> : null }
+          {/** To make more that one check use ( ) */}
+          {( this.state.currentPage <= this.state.totalPages && !this.state.loading ) ? 
+            <LoadMoreBtn 
+              text="Load more..."
+              onClick={ this.loadMoreItems }
+            /> : null }
         </div>
-        
-        <Spinner />
-        <LoadMoreBtn />
+        <LoadMoreBtn 
+
+          text="Load more..."
+        />
       </div>
     );
   };
