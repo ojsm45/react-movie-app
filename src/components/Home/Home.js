@@ -112,10 +112,6 @@ class Home extends Component {
               onClick={ this.loadMoreItems }
             /> : null }
         </div>
-        <LoadMoreBtn 
-
-          text="Load more..."
-        />
       </div>
     );
   };
