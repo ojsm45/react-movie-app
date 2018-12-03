@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import FontAwesome from 'react-fontawesome';
+import FontAwesome from 'react-fontawesome';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -22,8 +22,7 @@ class SearchBar extends Component {
     return(
       <div className="rmdb-searchbar">
         <div className="rmdb-searchbar-content">
-          {/** Insert search icon below*/}
-          {/** <FontAwesome className="rmdb-fa-search" name="search" size="2x" /> */}
+          <FontAwesome className="rmdb-fa-search" name="search" size="2x" />  
           <input 
             type="text"
             className="rmdb-searchbar-input"
