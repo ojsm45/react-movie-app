@@ -33,7 +33,7 @@ const MovieInfo = (props) => {
             })
           }
         </div>
-        <FontAwesome className="fa-film" name="film" size="Sx" />
+        <FontAwesome className="fa-film" name="film" size="2x" />
       </div>
     </div>
   );
