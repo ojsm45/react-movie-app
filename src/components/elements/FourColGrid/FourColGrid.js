@@ -4,13 +4,15 @@ import './FourColGrid.css';
 const FourColGrid = (props) => {
 
   const renderElements = () => {
-    const gridElements = props.children.map( (element, i) => {
+    const gridElements = React.Children.map(props.children, (element, i) => {
       return (
         <div key={i} className="rmdb-grid-element">
-          { element }
+          {element}
         </div>
       );
-    });
+    }); 
+    gridElements.pop();
+
     return gridElements;
   };
 

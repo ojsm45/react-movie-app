@@ -63,6 +63,7 @@ class Home extends Component {
     fetch( endpoint )
     .then( result => result.json() )
     .then( result => {
+      console.log(result);
       // Here we must have the data in json format
       this.setState({
         // Using ES6 Spread operator to take out array elements 
