@@ -8,7 +8,7 @@ const Actor = (props) => {
   return(
     <div className="rmdb-actor">
       <img 
-        src={props.actor.profile_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.actor.profile_path}` : './images/no_imge.jpg'}
+        src={props.actor.profile_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.actor.profile_path}` : './images/no_image.jpg'}
         alt="actorthumb"
       />
       <span className="rmdb-actor-name">{props.actor.name}</span>
