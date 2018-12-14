@@ -6,7 +6,7 @@ const Navigation = (props) => {
   return(
     <div className="rmdb-navigation">
       <div className="rmdb-navigation-content">
-        <Link to='/'>
+        <Link to= {process.env.PUBLIC_URL + '/'}>
           <p>Home</p>
         </Link>
         <p>/</p>
