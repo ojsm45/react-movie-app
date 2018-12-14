@@ -36,13 +36,13 @@ class Home extends Component {
     this.setState({
       movies: [],
       loading: true,
-      searchTerm
+      searchTerm,
     });
 
     if(this.searchTerm === ''){
       endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=es-US&query=${this.searchTerm}`
+      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=es-US&query=${this.state.searchTerm}`
     }
     this.fetchItems(endpoint);
   };
