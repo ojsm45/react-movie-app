@@ -6,7 +6,7 @@ const Navigation = (props) => {
   return(
     <div className="rmdb-navigation">
       <div className="rmdb-navigation-content">
-        <Link to= {process.env.PUBLIC_URL + '/'}>
+        <Link to= {process.env.PUBLIC_URL + '/react-movie-app/'}>
           <p>Home</p>
         </Link>
         <p>/</p>
