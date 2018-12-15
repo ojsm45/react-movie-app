@@ -7,11 +7,11 @@ import Home from '../Home/Home';
 
 const App = () => {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <React.Fragment>
         <Header />
         <Switch>
-        <Route path={process.env.PUBLIC_URL + '/'} component={ Home } exact />
+        <Route path={'/'} component={ Home } exact />
         <Route path="/:movieId" component={ Movie } exact />
         <Route component={ NotFound } />
         </Switch>
