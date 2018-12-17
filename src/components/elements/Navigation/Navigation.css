@@ -26,3 +26,12 @@
   text-decoration: none;
   margin: 0;
 }
+
+@media screen and (max-width: 380px) {
+  .rmdb-navigation {
+    height: 35px
+  }
+  .rmdb-navigation-content p {
+    font-size: 14px;
+  }
+}

@@ -36,7 +36,7 @@
   background: transparent;
   height: 40px;
   color: #fff;
-  min-width: 93%;
+  width: 7em;
 }
 
 .rmdb-searchbar-input:focus {
@@ -47,5 +47,25 @@
   .rmdb-searchbar-input {
     font-size: 28px;
     color: #fff;
+  }
+}
+@media screen and (max-width: 380px) {
+  .rmdb-searchbar {
+    height: 65px;
+  }
+  .rmdb-searchbar-content {
+    top: -10px;
+    height: 35px;
+  }
+  .rmdb-searchbar-input {
+    width: 16em;
+    font-size: 18px;
+    top: -4px;
+    left: 40px;
+  }
+  .rmdb-fa-search {
+    left: 15px;
+    top: 7px;
+    font-size: 18px !important;
   }
 }

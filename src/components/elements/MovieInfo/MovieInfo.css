@@ -102,3 +102,16 @@ meter::-webkit-meter-suboptimum-value {
 meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #ee5f5b);
 }
+
+@media screen and (max-width: 380px) {
+  .rmdb-movieinfo {
+    height: 50em;
+  }
+  .rmdb-movieinfo-thumb {
+    width: 10em;
+  }
+  .rmdb-movieinfo-text {
+    left: -1em;
+    top: 13em;
+  }
+}
