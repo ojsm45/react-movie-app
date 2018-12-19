@@ -4,6 +4,10 @@ import FontAwesome from 'react-fontawesome';
 import MovieThumb from '../MovieThumb/MovieThumb';
 import './MovieInfo.css';
 
+var truncateText = (text) =>{
+  return (text.substring(0, 250) + '...');
+}
+
 const MovieInfo = (props) => {
   return(
     <div className="rmdb-movieinfo"
@@ -21,7 +25,7 @@ const MovieInfo = (props) => {
         <div className="rmdb-movieinfo-text">
           <h1>{ props.movie.title }</h1>
           <h3>PLOT</h3>
-          <p>{ props.movie.overview }</p>
+          <p>{ truncateText(props.movie.overview) }</p>
           <h3>IMDB RATING</h3>
           <div className="rmdb-rating">
             <meter min="0" max="100" optimum="100" low="40" high="70" value={props.movie.vote_average * 10}></meter>

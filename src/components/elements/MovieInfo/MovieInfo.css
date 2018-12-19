@@ -114,4 +114,12 @@ meter::-webkit-meter-even-less-good-value {
     left: -1em;
     top: 13em;
   }
+  .rmdb-movieinfo-text h1 {
+    font-size: 38px;
+  }
+  .rmdb-movieinfo-text p {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
 }

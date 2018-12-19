@@ -22,6 +22,9 @@
   box-sizing: border-box;
   padding: 10px 20px 0 0;
 }
+.rmdb-movieinfobar-content-col .fa {
+  float: left;
+}
 
 .rmdb-movieinfobar-info {
   padding: 5px 0 0 10px;
