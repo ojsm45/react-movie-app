@@ -12,16 +12,11 @@ import './Home.css';
 
 class Home extends Component {
   state = {
-    // To collect the movies
     movies: [],
-    // For Big Image size
     heroImage: null,
-    // To check if we are loading
     loading: false,
-    // For pager
     currentPage: 0,
     totalPages: 0,
-    // For search movie
     searchTerm: ''
   }
 
@@ -84,25 +79,27 @@ class Home extends Component {
   }
 
   render(){
+    // es6 destructuring the state
+    const {movies, heroImage, loading, currentPage, totalPages, searchTerm} = this.state;
     return(
       <div className="rmdb-home">
         {/** Ternary Operator*/}
-        { this.state.heroImage ?
+        { heroImage ?
         <div>
           <HeroImage 
-            image={ `${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}` }
-            title={ this.state.heroImage.original_title }
-            text={ this.state.heroImage.overview }
+            image={ `${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImage.backdrop_path}` }
+            title={ heroImage.original_title }
+            text={ heroImage.overview }
           />
           <SearchBar callback={ this.searchItems }/>
         </div> : null }
         <div className="rmdb-home-grid">
           <FourColGrid 
-            header={ this.state.searchTerm ? 'Search Result' : 'Popular Movies' }
-            loading={ this.state.loading }
+            header={ searchTerm ? 'Search Result' : 'Popular Movies' }
+            loading={ loading }
             >
 
-            { this.state.movies.map( (element, i) => {
+            { movies.map( (element, i) => {
               return <MovieThumb 
                         key={i}
                         clickable={true}
@@ -112,9 +109,9 @@ class Home extends Component {
                       />
             })};
           </FourColGrid>
-          { this.state.loading ? <Spinner /> : null }
+          { loading ? <Spinner /> : null }
           {/** To make more that one check use ( ) */}
-          {( this.state.currentPage <= this.state.totalPages && !this.state.loading ) ? 
+          {( currentPage <= totalPages && !loading ) ? 
             <LoadMoreBtn 
               text="Load more..."
               onClick={ this.loadMoreItems }
